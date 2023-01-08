@@ -9,4 +9,4 @@ function markup(items) {
 };
 const createdGalary = markup(galleryItems);
 gallareEl.insertAdjacentHTML("beforeend", createdGalary);
-let gallery = new SimpleLightbox('.gallery a', { captionsData: "alt" });
+let gallery = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250 });
