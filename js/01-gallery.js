@@ -27,7 +27,10 @@ gallareEl.addEventListener("click", (ev) => {
   const instance = basicLightbox.create(`
     <img calss = "gallery__image gallery__image:hover" src="${ev.target.dataset.source}" width="100%" height="100%">
 `)
-
   instance.show()
-
+  document.addEventListener("keyup", event => {
+    if (event.code === "Escape") {
+      instance.close();
+    }
+  });
 })
